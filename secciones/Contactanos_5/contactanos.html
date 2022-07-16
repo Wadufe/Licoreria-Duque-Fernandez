@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="../../recursos/imagenes/Pestaña_logo.ico">
+    <link rel="stylesheet" href="../../style.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <title>Beer House - licoreria</title>
+</head>
+
+<body>
+    <!-- -------------------------------Logo de la empresa-------------------------------->
+    <header id="inicio">
+        <a href="../../index.html" class="logo">
+            <img src="../../recursos/imagenes/Logo.png" alt="logo de la empresa">
+        </a>
+        <!-- -------------------------------Menu principal--------------------------------- -->
+        <nav>
+            <ul class="menu">
+                <li><a href="../Cervezas_1/cervezas.html">Cervezas</a></li>
+                <li><a href="../Vinos_2/vinos.html">Vinos</a></li>
+                <li><a href="../Licores fuertes_3/licoresFuertes.html">Licores fuertes</a></li>
+                <li><a href="../Alimentos_4/alimentos.html">Alimentos</a></li>
+                <li><a href="contactanos.html">Contactanos</a></li>
+            </ul>
+        </nav>
+        <form action="" method="" class="Form_buscar" autocomplete="off">
+            <input type="search" placeholder="Buscar" id="Busqueda" required pattern="[a-z A-Z]+">
+            <button type="submit" class="Btn_buscar">
+                <img src="../../recursos/imagenes/search.png">
+            </button>
+        </form>
+        <div class="iconos">
+            <a href="" id="CarritoCompras">
+                <img src="../../recursos/imagenes/carrito-de-compras.png" alt="Carrito de compras">
+            </a>
+            <a href="" id="CuentaUsuario">
+                <img src="../../recursos/imagenes/usuario.png" alt="Cuenta del cliente">
+            </a>
+        </div>
+
+        <div class="menu-bar">
+            <i class="fas fa-bars" id="menu-bar"></i>
+        </div>
+
+    </header>
+    <main>
+        <div class="margenes-contactanos">
+            <!-- -------------------------------Contenido principal----------------------------- -->
+            <section>
+
+                <h1>Contactanos</h1>
+
+                <form action="" method="">
+                    <p>Nuestra ubicación:</p>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31729.525020906432!2d-75.62093735275307!3d6.238587700000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4429a059d45ab3%3A0xbe4ac1e907bf43b0!2sLICORES%20MEDELLIN%20-%20TIENDA%20DE%20LICORES!5e0!3m2!1ses-419!2sco!4v1655505121317!5m2!1ses-419!2sco"
+                        width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+
+                    <p>Teléfono: (+57) 320-540-45-34</p>
+
+                    <input type="text" placeholder="Su nombre" name="Nombre" required pattern="[a-z A-Z]+"
+                    title="Por favor ingresar su nombre">
+
+                    <input type="email" placeholder="Tu correo electronico" name="Email" required>
+
+                    <textarea id="txtArea" name="txtArea" placeholder="Tu mensaje..." cols="34" rows="10"></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
+        </div>
+    </main>
+    <!-- -------------------------------Pie de pagina--------------------------------- -->
+    <footer class="piePagina">
+        <p>“DISFRUTA LO MEJOR DE TOMAR, SIN LO MALO DE EXCEDERTE”. EL EXCESO DE ALCOHOL ES PERJUDICIAL PARA LA SALUD.LEY
+            30 DE 1986. PROHÍBASE EL EXPENDIO DE BEBIDAS EMBRIAGANTES A MENORES DE EDAD Y MUJERES EMBARAZADAS. LEY 124
+            DE 1994.”</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,521 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenedorGrid_padre-index {
+
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:"header header header header header header"
+                        "sliders sliders sliders sliders sliders sliders"
+                        "img_principales img_principales img_principales img_principales img_principales img_principales"
+                        "productos productos productos productos productos productos"
+                        "piePagina piePagina piePagina piePagina piePagina piePagina";
+
+}
+
+.logo img {
+    height: 145px;
+    width: 200px;
+    position: relative;
+    bottom: 4px;
+}
+
+header {
+    grid-area: header;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: url("./recursos/imagenes/Fondo.png");
+    height: 130px;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu a {
+    color: whitesmoke;
+    margin-right: 35px;
+    font-size: 19px;
+}
+
+.Form_buscar {
+    height: 35px;
+    width: 14%;
+    display: flex;
+    flex-direction: row;
+}
+
+#Busqueda {
+    width: 100%;
+    padding: 10px 35px 10px 15px;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 0.75rem;
+}
+
+.Btn_buscar {
+    background: transparent;
+    border: none;
+    outline: none;
+    margin-left: -33px;
+}
+
+.Btn_buscar img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+#Busqueda:focus {
+    outline: none;
+}
+
+#CarritoCompras{
+    position: relative;
+    right: 10px;
+}
+
+#CarritoCompras img {
+    width: 35px;
+    height: 35px;
+}
+
+#CuentaUsuario img {
+    width: 28px;
+    height: 28px;
+    position: relative;
+    bottom: 2px;
+}
+
+.menu a:hover {
+    color: yellowgreen;
+}
+
+.piePagina {
+    background-image: url("./recursos/imagenes/Fondo.png");
+}
+
+.piePagina {
+    grid-area: piePagina;
+}
+
+.piePagina p {
+    margin: 0;
+    color: whitesmoke;
+    padding-right: 55px;
+    padding-left: 55px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.menu-bar {
+    font-size: 30px;
+    color: #fff;
+    line-height: 80px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:1194px) {
+
+    nav,
+    .Form_buscar,
+    .iconos {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu-bar {
+        margin-right: 8%;
+    }
+    
+}
+
+@media only screen and (min-width:1194px) {
+
+    .menu-bar {
+        display: none;
+    }
+}
+
+/*---------------------------------------------index-----------------------------------------------*/
+    
+    .sliders {
+        height: 100vh;
+        grid-area: sliders;
+    }
+
+    #slider_1 img {
+        height: 100%;
+        max-width: 100%;
+        object-fit: fill;
+    }
+
+    .img_principales {
+        grid-area: img_principales;
+
+        display: grid;
+        gap: 1em;
+        grid-auto-flow: column;
+        overflow-x: auto;
+
+        padding-top: 20px;
+        padding-bottom: 40px;
+        padding-right: 60px;
+        padding-left: 60px;
+        background-image: url("./recursos/imagenes/captura.png");
+        background-size: cover;
+        /*background-color: #1C1C18;*/
+    }
+
+    .img_principales a {
+        color: whitesmoke;
+        text-align: center;
+        position: relative;
+        top: 50%;
+    }
+
+    #content_img1 {
+        border: 1px solid black;
+        background-image: url("./recursos/imagenes/img_principal/img.png");
+        background-size: cover;
+        background-position: center;
+        height: 6em;
+        width: 16em;
+        border-radius: 25px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        -o-border-radius: 25px;
+    }
+
+    #content_img2 {
+        border: 1px solid black;
+        background-image: url("./recursos/imagenes/img_principal/img2.png");
+        background-size: cover;
+        background-position: center;
+        height: 250px;
+        width: 400px;
+    }
+
+    #content_img3 {
+        border: 1px solid black;
+        background-image: url("./recursos/imagenes/img_principal/img3.png");
+        background-size: cover;
+        background-position: center;
+        height: 250px;
+        width: 400px;
+    }
+
+    .productos {
+        grid-area: productos;
+    }
+
+    .VinosMas_vendidos {
+        background-color: #FFFFFF;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+
+    .productos h1 {
+        margin-bottom: 15px;
+    }
+
+    .productos p {
+        text-align: justify;
+        margin-bottom: 25px;
+    }
+
+    #imgBase {
+        width: 100%;
+        display: block;
+    }
+
+/*------------------------------------Cervezas------------------------------------*/
+
+.margenes-cervezas {
+    padding: 32px 96px 48px 96px;
+}
+
+.filtro-cervezas {
+    padding-left: 28px;
+}
+
+.filtro-cervezas p {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin: 0;
+}
+
+.filtro-cervezas hr {
+    width: 85%;
+}
+
+.banner-cerveza {
+    grid-column: 2/5;
+}
+
+.banner-cerveza img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.contenedorCervezas {
+    display: grid;
+    gap: 1.6em;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+}
+
+.cervezas-contenido {
+    grid-column: 2/5;
+}
+
+.cervezas-contenido h1 {
+    color: olivedrab;
+}
+
+.cervezas-contenido h1,
+p {
+    margin-bottom: 15px;
+}
+
+@media only screen and (max-width:1194px) {
+
+    .contenedorCervezas {
+        display: grid;
+        gap: 1.6em;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: "banner-cerveza banner-cerveza banner-cerveza banner-cerveza"
+                             "filtro-cervezas cervezas-contenido cervezas-contenido cervezas-contenido";
+    }
+
+    .filtro-cervezas {
+        grid-area: filtro-cervezas;
+        padding: 0%;
+    }
+    .filtro-cervezas p {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .banner-cerveza {
+        grid-area: banner-cerveza;
+    }
+
+    .cervezas-contenido {
+        grid-area: cervezas-contenido;
+    }
+
+    .margenes-cervezas {
+        padding: 1rem;
+    }
+}
+
+@media only screen and (max-width:560px) {
+    .filtro-cervezas, .cervezas-contenido{
+    font-size: 75%;
+    }
+}
+
+/*-------------------------------------Vinos-------------------------------------*/
+
+.margenes-vinos {
+    padding: 32px 96px 48px 96px;
+}
+
+.filtro-vinos {
+    padding-left: 28px;
+    grid-area: filtro-vinos;
+}
+
+.filtro-vinos p {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin: 0;
+}
+
+.filtro-vinos hr {
+    width: 85%;
+}
+
+.contenedorVinos {
+
+    display: grid;
+    gap: 1.6em;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "filtro-vinos encabezadoVinos encabezadoVinos encabezadoVinos"
+                         "filtro-vinos vinos-contenido vinos-contenido vinos-contenido";
+}
+
+.encabezadoVinos {
+    display: flex;
+    justify-content: space-between;
+    height: min-content;
+
+    grid-area: encabezadoVinos;
+}
+
+.titulo {
+    align-self: flex-end;
+}
+
+.titulo h1 {
+    color: olivedrab;
+    margin-bottom: 15px;
+}
+
+.titulo p {
+    margin: 0;
+}
+
+.bannerVinos {
+    height: min-content;
+}
+
+.bannerVinos img {
+    border-radius: 1rem;
+    width: 100%;
+    display: block;
+}
+
+.vinos-contenido {
+    
+    text-align: justify;
+    grid-area: vinos-contenido;
+}
+
+.vinos-contenido p {
+    margin: 0;
+}
+
+@media only screen and (max-width:1020px) {
+
+    .contenedorVinos {
+        display: grid;
+        gap: 1.6em;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas:"encabezadoVinos encabezadoVinos encabezadoVinos encabezadoVinos"
+                            "vinos-contenido vinos-contenido vinos-contenido filtro-vinos";
+    }
+    .encabezadoVinos {
+        grid-area: encabezadoVinos;
+    }
+
+    .vinos-contenido{
+        grid-area: vinos-contenido;
+        margin: 0;
+    }
+    .filtro-vinos{
+        grid-area: filtro-vinos;
+        padding: 0%;
+    }
+    .margenes-vinos {
+        padding: 1rem;
+    }
+    .filtro-vinos p {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+/*--------------------------------Licores fuertes-------------------------------*/
+*/
+
+.margenes-licoresFuertes {
+    padding: 32px 96px 48px 96px;
+}
+
+.filtro-licores {
+    padding-left: 28px;
+}
+
+.filtro-licores p {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin: 0;
+}
+
+.filtro-licores hr {
+    width: 85%;
+}
+
+.contenedorLicores {
+    display: grid;
+    gap: 1.6em;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.cuerpo-licores {
+    grid-column: 2/5;
+}
+
+.encabezadoLicores {
+    display: flex;
+    justify-content: space-between;
+    height: min-content;
+}
+
+.tituloLicores {
+    align-self: flex-end;
+}
+
+.tituloLicores h1 {
+    color: olivedrab;
+    margin-bottom: 15px;
+}
+
+.tituloLicores p {
+    margin: 0;
+}
+
+.bannerLicores {
+    height: min-content;
+}
+
+.bannerLicores img {
+    border-radius: 1rem;
+    width: 100%;
+    display: block;
+}
+
+.licores-contenido {
+    margin-top: 25px;
+    text-align: justify;
+}
+
+.licores-contenido p {
+    margin: 0;
+}
+
+
+/*-----------------------------------Alimentos---------------------------------*/
+
+/*----------------------------------Contactanos-------------------------------*/
+
+.margenes-contactanos {
+    padding: 32px 96px 48px 96px;
+}
