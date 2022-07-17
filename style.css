@@ -10,16 +10,27 @@
 .contenedorGrid_padre-index {
 
     min-height: 100vh;
+    /*overflow-x: hidden;*/
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(5, auto);
-    grid-template-areas:"header header header header header header"
-                        "sliders sliders sliders sliders sliders sliders"
-                        "img_principales img_principales img_principales img_principales img_principales img_principales"
-                        "productos productos productos productos productos productos"
-                        "piePagina piePagina piePagina piePagina piePagina piePagina";
+    grid-template-areas: "header header header header header header"
+        "sliders sliders sliders sliders sliders sliders"
+        "scroll_img scroll_img scroll_img scroll_img scroll_img scroll_img"
+        "productos productos productos productos productos productos"
+        "piePagina piePagina piePagina piePagina piePagina piePagina";
+}
+
+body::-webkit-scrollbar {
+    width: 7px;
 
 }
+
+body::-webkit-scrollbar-thumb {
+    background: #CFCECF;
+    border-radius: 5px;
+}
+
 
 .logo img {
     height: 145px;
@@ -83,7 +94,7 @@ header {
     outline: none;
 }
 
-#CarritoCompras{
+#CarritoCompras {
     position: relative;
     right: 10px;
 }
@@ -144,7 +155,7 @@ header {
     .menu-bar {
         margin-right: 8%;
     }
-    
+
 }
 
 @media only screen and (min-width:1194px) {
@@ -155,99 +166,122 @@ header {
 }
 
 /*---------------------------------------------index-----------------------------------------------*/
-    
-    .sliders {
-        height: 100vh;
-        grid-area: sliders;
+
+.sliders {
+    height: 100vh;
+    grid-area: sliders;
+}
+
+#slider_1 img {
+    height: 100%;
+    max-width: 100%;
+    object-fit: fill;
+}
+
+.margenesImg_scroll {
+    padding: 48px 80px 80px 80px;
+    min-width: 100vw;
+    background-image: url("./recursos/imagenes/indexFondocategorias.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.img_principales {
+    grid-area: scroll_img;
+
+    display: grid;
+    gap: 1em;
+    grid-auto-flow: column;
+    overflow-x: auto;
+
+    padding: 48px 0px 16px 0px;
+    overflow-y: hidden;
+}
+
+.img_principales a {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 6em;
+    width: 16em;
+    border-radius: 25px;
+
+    background-color: rgba(255, 255, 255, .2);
+    backdrop-filter: blur(0.7rem);
+    box-shadow: .3em .3em .5em black;
+}
+
+.img_principales p {
+    margin: 0;
+    color: white;
+    font-family: Prata;
+    font-size: 26px;
+}
+
+.img_principales img {
+    max-width: 64px;
+    max-height: 120px;
+
+    align-self: flex-end;
+    position: relative;
+    bottom: 1rem;
+}
+
+.img_principales::-webkit-scrollbar {
+    height: 7px;
+}
+
+.img_principales::-webkit-scrollbar-thumb {
+    background: #CFCECF;
+    border-radius: 5px;
+}
+
+.img_principales img:hover {
+    animation: img-licor 0s ease 0s 1 normal forwards;
+}
+
+@keyframes img-licor {
+    0% {
+        transform: translateY(0px);
     }
 
-    #slider_1 img {
-        height: 100%;
-        max-width: 100%;
-        object-fit: fill;
+    100% {
+        transform: translateY(-9px);
     }
+}
 
-    .img_principales {
-        grid-area: img_principales;
 
-        display: grid;
-        gap: 1em;
-        grid-auto-flow: column;
-        overflow-x: auto;
 
-        padding-top: 20px;
-        padding-bottom: 40px;
-        padding-right: 60px;
-        padding-left: 60px;
-        background-image: url("./recursos/imagenes/captura.png");
-        background-size: cover;
-        /*background-color: #1C1C18;*/
-    }
 
-    .img_principales a {
-        color: whitesmoke;
-        text-align: center;
-        position: relative;
-        top: 50%;
-    }
 
-    #content_img1 {
-        border: 1px solid black;
-        background-image: url("./recursos/imagenes/img_principal/img.png");
-        background-size: cover;
-        background-position: center;
-        height: 6em;
-        width: 16em;
-        border-radius: 25px;
-        -webkit-border-radius: 25px;
-        -moz-border-radius: 25px;
-        -ms-border-radius: 25px;
-        -o-border-radius: 25px;
-    }
 
-    #content_img2 {
-        border: 1px solid black;
-        background-image: url("./recursos/imagenes/img_principal/img2.png");
-        background-size: cover;
-        background-position: center;
-        height: 250px;
-        width: 400px;
-    }
+.productos {
+    grid-area: productos;
+}
 
-    #content_img3 {
-        border: 1px solid black;
-        background-image: url("./recursos/imagenes/img_principal/img3.png");
-        background-size: cover;
-        background-position: center;
-        height: 250px;
-        width: 400px;
-    }
+.VinosMas_vendidos {
+    background-color: #FFFFFF;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-right: 50px;
+    padding-left: 50px;
+}
 
-    .productos {
-        grid-area: productos;
-    }
+.productos h1 {
+    margin-bottom: 15px;
+}
 
-    .VinosMas_vendidos {
-        background-color: #FFFFFF;
-        padding-top: 25px;
-        padding-bottom: 25px;
-        padding-right: 50px;
-        padding-left: 50px;
-    }
+.productos p {
+    text-align: justify;
+    margin-bottom: 25px;
+}
 
-    .productos h1 {
-        margin-bottom: 15px;
-    }
-
-    .productos p {
-        text-align: justify;
-        margin-bottom: 25px;
-    }
-
-    #imgBase {
-        width: 100%;
-        display: block;
-    }
+#imgBase {
+    width: 100%;
+    display: block;
+}
 
 /*------------------------------------Cervezas------------------------------------*/
 
@@ -308,13 +342,14 @@ p {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, auto);
         grid-template-areas: "banner-cerveza banner-cerveza banner-cerveza banner-cerveza"
-                             "filtro-cervezas cervezas-contenido cervezas-contenido cervezas-contenido";
+            "filtro-cervezas cervezas-contenido cervezas-contenido cervezas-contenido";
     }
 
     .filtro-cervezas {
         grid-area: filtro-cervezas;
         padding: 0%;
     }
+
     .filtro-cervezas p {
         padding-top: 15px;
         padding-bottom: 15px;
@@ -334,8 +369,10 @@ p {
 }
 
 @media only screen and (max-width:560px) {
-    .filtro-cervezas, .cervezas-contenido{
-    font-size: 75%;
+
+    .filtro-cervezas,
+    .cervezas-contenido {
+        font-size: 75%;
     }
 }
 
@@ -367,7 +404,7 @@ p {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, auto);
     grid-template-areas: "filtro-vinos encabezadoVinos encabezadoVinos encabezadoVinos"
-                         "filtro-vinos vinos-contenido vinos-contenido vinos-contenido";
+        "filtro-vinos vinos-contenido vinos-contenido vinos-contenido";
 }
 
 .encabezadoVinos {
@@ -402,7 +439,7 @@ p {
 }
 
 .vinos-contenido {
-    
+
     text-align: justify;
     grid-area: vinos-contenido;
 }
@@ -418,24 +455,28 @@ p {
         gap: 1.6em;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, auto);
-        grid-template-areas:"encabezadoVinos encabezadoVinos encabezadoVinos encabezadoVinos"
-                            "vinos-contenido vinos-contenido vinos-contenido filtro-vinos";
+        grid-template-areas: "encabezadoVinos encabezadoVinos encabezadoVinos encabezadoVinos"
+            "vinos-contenido vinos-contenido vinos-contenido filtro-vinos";
     }
+
     .encabezadoVinos {
         grid-area: encabezadoVinos;
     }
 
-    .vinos-contenido{
+    .vinos-contenido {
         grid-area: vinos-contenido;
         margin: 0;
     }
-    .filtro-vinos{
+
+    .filtro-vinos {
         grid-area: filtro-vinos;
         padding: 0%;
     }
+
     .margenes-vinos {
         padding: 1rem;
     }
+
     .filtro-vinos p {
         padding-top: 15px;
         padding-bottom: 15px;
@@ -443,9 +484,7 @@ p {
 }
 
 /*--------------------------------Licores fuertes-------------------------------*/
-*/
-
-.margenes-licoresFuertes {
+*/ .margenes-licoresFuertes {
     padding: 32px 96px 48px 96px;
 }
 
