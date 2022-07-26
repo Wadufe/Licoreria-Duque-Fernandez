@@ -13,6 +13,9 @@
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
     <title>Beer House - licoreria</title>
 </head>
 
@@ -57,23 +60,266 @@
             <!-- -------------------------------Contenido principal----------------------------- -->
             <div class="contenedorVinos">
                 <section class="filtro-vinos">
-                    <p>Filtrado por:</p>
-                    <hr>
-                    <p>Pais de origen</p>
-                    <hr>
-                    <p>Cepa</p>
-                    <hr>
-                    <p>Marca</p>
-                    <hr>
-                    <p>Premios</p>
-                    <hr>
-                    <p>Puedes acompañarlo con</p>
-                    <hr>
-                    <p>Categoria</p>
-                    <hr>
-                    <p>Region</p>
-                </section>
 
+                    <div class="accordion" id="accordionExample">
+
+                        <div class="accordion-item border border-0 border-bottom">
+                            <p class="accordion-header">
+                                Filtrado por:
+                            </p>
+                        </div>
+
+                        <div class="accordion-item border border-0 border-bottom">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Pais de origen
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Alemania
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Colombia
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="accordion-item border border-0 border-bottom">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Cepa
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Torrontes
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Bonarda
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Verdejo
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="accordion-item border border-0 border-bottom">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Marca
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Casillero del diblo
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Astica
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Alma mora
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="accordion-item border border-0 border-bottom">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Premios
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Top10
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Best wine award
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Gran oro nuevo vino
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="accordion-item border border-0 border-bottom">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Puedes acompañarlo con
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            pan
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            galletas
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            queso
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="accordion-item border border-0 border-bottom">
+                            <h2 class="accordion-header" id="headingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    Categoria
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Tinto
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Blanco
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Espumoso
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="accordion-item border border-0 border-bottom">
+                            <h2 class="accordion-header" id="headingSeven">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                    Region
+                                </button>
+                            </h2>
+                            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Viña san pedro
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            La pampa
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                </section>
 
                 <div class="encabezadoVinos">
                     <section class="titulo">
@@ -92,10 +338,11 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam voluptatem dolorum, cumque
                         ullam
                         voluptas accusamus accusantium totam <strong style="color: blueviolet;">CONTENIDO
-                        TEMPORAL PARA VER COMO SE ADAPTA EL CONTENIDO</strong> aliquid facere illum maiores rem nemo
+                            TEMPORAL PARA VER COMO SE ADAPTA EL CONTENIDO</strong> aliquid facere illum maiores rem nemo
                         vel neque temporibus veniam reiciendis illo! Libero commodi aut reiciendis quibusdam ad eveniet
-                        sapiente esse, explicabo harum quo ab dignissimos eum. Labore blanditiis explicabo, asperiores natus, <strong
-                        style="color: blueviolet;">IMAGENES DE VINOS</strong> Ab sequi repellendus tenetur
+                        sapiente esse, explicabo harum quo ab dignissimos eum. Labore blanditiis explicabo, asperiores
+                        natus, <strong style="color: blueviolet;">IMAGENES DE VINOS</strong> Ab sequi repellendus
+                        tenetur
                         beatae facilis molestiae, assumenda iste eius iure officia. Quibusdam sequi quae animi ex
                         optio,molestiae magni voluptatibus fugiat vero quis at minima? Similique error sapiente
                         quaerat eaque culpa officiis. Quod, animi ex porro alias sunt aliquam! Sint.
@@ -115,7 +362,9 @@
                         facilis. Necessitatibus earum repellat debitis beatae labore iure ipsa nobis ducimus cupiditate
                         eius tempora magnam aperiam asperiores minima id, expedita nostrum quo. Maxime placeat quo
                         debitis fugiat ipsum perferendis atque unde nobis maiores! Quod culpa voluptatum, blanditiis
-                        laborum, reiciendis vero mollitia asperioresnemo ullam, ab dignissimos nesciunt doloremque tempora obcaecati fuga. Delectus ipsam nemo quia ea magnam molestiae iure tenetur est facilis. Necessitatibus earum repellat debitis beatae
+                        laborum, reiciendis vero mollitia asperioresnemo ullam, ab dignissimos nesciunt doloremque
+                        tempora obcaecati fuga. Delectus ipsam nemo quia ea magnam molestiae iure tenetur est facilis.
+                        Necessitatibus earum repellat debitis beatae
                         labore iure ipsa nobis ducimus cupiditate eius tempora magnam aperiam asperiores minima id,
                         expedita nostrum quo. Maxime placeat quo debitis fugiat ipsum perferendis atque unde nobis
                         maiores! Quod culpa voluptatum, blanditiis laborum, reiciendis vero mollitia asperiores
@@ -131,6 +380,9 @@
             124 DE 1994.”</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
