@@ -10,8 +10,11 @@
     <link rel="stylesheet" href="../../style.css">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
-    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
     <title>Beer House - licoreria</title>
 </head>
@@ -57,11 +60,83 @@
             <!-- -------------------------------Contenido principal----------------------------- -->
             <div class="contenedorLicores">
                 <section class="filtro-licores">
-                    <p>Filtrado por:</p>
-                    <hr>
-                    <p>Marca</p>
-                    <hr>
-                    <p>Sub-categoria</p>
+
+
+                    <div class="accordion" id="accordionExample">
+
+                        <div class="accordion-item border border-0 border-bottom">
+                            <p class="accordion-header">
+                                Filtrado por:
+                            </p>
+                        </div>
+
+                        <div class="accordion-item border border-0 border-bottom">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Marca
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            400 conejos
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Gordons
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="accordion-item border border-0 border-bottom">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Sub-categoria
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Importadas
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Artesanales
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Nacionales
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
                 </section>
 
                 <div class="cuerpo-licores">
@@ -79,27 +154,85 @@
                     </div>
 
                     <section class="licores-contenido">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam voluptatem dolorum, cumque
-                            ullam voluptas accusamus accusantium totam <strong style="color: blueviolet;">CONTENIDO
-                            TEMPORAL</strong> aliquid facere illum maiores rem nemo vel neque temporibus veniam
-                            reiciendis illo! Libero commodi aut reiciendis quibusdam ad eveniet sapiente esse, explicabo
-                            harum quo ab dignissimos eum. Labore blanditiis explicabo, asperiores natus, <strong
-                            style="color: blueviolet;">IMAGENES DE LICORES</strong> Ab sequi repellendus tenetur
-                            beatae facilis molestiae, assumenda iste eius iure officia. Quibusdam sequi quae animi ex
-                            optio,molestiae magni voluptatibus fugiat vero quis at minima? Similique error sapiente
-                            quaerat eaque culpa officiis. Quod, animi ex porro alias sunt aliquam! Sint.</p>
 
-                        <br>
+                        <div class="productosCervezas d-flex justify-content-between">
 
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quasi nihil numquam
-                            doloribus velit, molestias deserunt amet maiores enim, laborum inventore ipsam vitae
-                            eligendi voluptatum culpa error a dicta voluptates quisquam excepturi. Repudiandae odio,
-                            maiores quod voluptates labore aspernatur similique ratione atque maxime? Voluptates eveniet
-                            neque quis aliquam, eos amet? Dolorum tempora ipsum doloremque quam delectus? Minima at
-                            voluptatum placeat ullam, similique commodi magnam accusamus dolor mollitia qui eaque sed
-                            voluptatem quia repellat odio totam. Odio sunt nobis, quisquam numquam mollitia eum
-                            inventore dignissimos! Officiis, et! Eos fuga laudantium consectetur, eveniet animi quisquam
-                            molestias odio? Autem dolore iure suscipit doloremque!</p>
+                            <div class="card cervezaCards border border-0">
+                                <img src="../../recursos/imagenes/img_LicoresFuertes/licorUno.png" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body p-0 ">
+                                    <h5 class="card-title">$ 178,200</h5>
+                                    <p class="card-text">Whisky Buchanans Deluxe 12 Años Blended</p>
+                                    <div class="elementos4">
+                                        <input type="checkbox" class="btn-check border" id="btn-check-2" checked
+                                            autocomplete="off">
+                                        <label class="btn bg-light" for="btn-check-2">330ml</label>
+
+                                        <p>Selecciona el tamaño de la botella</p>
+                                    </div>
+                                    <a href="#"
+                                        class="btn btn-0 w-100 position-absolute bottom-0 end-0 botonComprarCerveza"
+                                        style="background-color: #810100;
+                                color: whitesmoke;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
+                                            <path
+                                                d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+                                        </svg> Comprar</a>
+
+                                </div>
+                            </div>
+
+
+                            <div class="card cervezaCards border border-0">
+                                <img src="../../recursos/imagenes/img_LicoresFuertes/licorDos.png" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body p-0">
+                                    <h5 class="card-title">$ 159,000</h5>
+                                    <p class="card-text">Whisky Old Parr 12 Años Blended</p>
+                                    <div class="elementos4">
+                                        <input type="checkbox" class="btn-check border" id="btn-check-2" checked
+                                            autocomplete="off">
+                                        <label class="btn bg-light" for="btn-check-2">330ml</label>
+
+                                        <p>Selecciona el tamaño de la botella</p>
+                                    </div>
+                                    <a href="#"
+                                        class="btn btn-0 w-100 position-absolute bottom-0 end-0 botonComprarCerveza"
+                                        style="background-color: #810100;
+                                color: whitesmoke;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
+                                            <path
+                                                d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+                                        </svg> Comprar</a>
+                                </div>
+                            </div>
+
+                            <div class="card cervezaCards border border-0">
+                                <img src="../../recursos/imagenes/img_LicoresFuertes/licorTres.png" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body p-0">
+                                    <h5 class="card-title">$ 10,600</h5>
+                                    <p class="card-text">Whisky Chivas Regal 12 Años</p>
+
+                                    <div class="elementos4">
+                                        <input type="checkbox" class="btn-check border" id="btn-check-2" checked
+                                            autocomplete="off">
+                                        <label class="btn bg-light" for="btn-check-2">330ml</label>
+
+                                        <p>Selecciona el tamaño de la botella</p>
+                                    </div>
+                                    <a href="#"
+                                        class="btn btn-0 w-100 position-absolute bottom-0 end-0 botonComprarCerveza"
+                                        style="background-color: #810100;
+                                color: whitesmoke;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
+                                            <path
+                                                d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+                                        </svg> Comprar</a>
+                                </div>
+                            </div>
+                        </div>
+
                     </section>
                 </div>
             </div>
@@ -112,6 +245,11 @@
             LEY 30 DE 1986. PROHÍBASE EL EXPENDIO DE BEBIDAS EMBRIAGANTES A MENORES DE EDAD Y MUJERES EMBARAZADAS. LEY
             124 DE 1994.”</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
 </body>
 
 </html>
