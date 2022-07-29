@@ -45,7 +45,7 @@ header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-image: url("./recursos/imagenes/Fondo.png");
+    background-image: url(../src/multimedia/imagenes/Fondo.png);
     height: 130px;
 }
 
@@ -116,7 +116,7 @@ header {
 }
 
 .piePagina {
-    background-image: url("./recursos/imagenes/Fondo.png");
+    background-image: url("../src/multimedia/imagenes/Fondo.png");
 }
 
 .piePagina {
@@ -203,7 +203,7 @@ header {
 .margenesImg_scroll {
     padding: 48px 80px 80px 80px;
     min-width: 100vw;
-    background-image: url("./recursos/imagenes/indexFondocategorias.png");
+    background-image: url("../src/multimedia/imagenes/indexFondocategorias.png");
     background-size: cover;
     background-position: center;
 }
