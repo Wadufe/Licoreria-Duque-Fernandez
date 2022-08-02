@@ -1,3 +1,6 @@
+/* ---- Variables ----- */
+$colorTitle: #B8A25A;
+
 * {
     margin: 0;
     padding: 0;
@@ -19,6 +22,7 @@
         "scroll_img scroll_img scroll_img scroll_img scroll_img scroll_img"
         "productos productos productos productos productos productos"
         "articulos_index articulos_index articulos_index articulos_index articulos_index articulos_index"
+        "contenidoP contenidoP contenidoP contenidoP contenidoP contenidoP"
         "piePagina piePagina piePagina piePagina piePagina piePagina";
 }
 
@@ -32,112 +36,16 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-.logo img {
-    height: 145px;
-    width: 200px;
-    position: relative;
-    bottom: 4px;
-}
 
-header {
-    grid-area: header;
 
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-image: url(../src/multimedia/imagenes/Fondo.png);
-    height: 130px;
-}
 
-.menu li {
-    display: inline-block;
-}
+@import '../scss/base/_header';
+@import '../scss/base/_footer';
 
-.menu a {
-    color: whitesmoke;
-    margin-right: 35px;
-    font-size: 19px;
-}
 
-.Form_buscar {
-    height: 35px;
-    width: 14%;
-    display: flex;
-    flex-direction: row;
-}
 
-#Busqueda {
-    width: 100%;
-    padding: 10px 35px 10px 15px;
-    border: none;
-    outline: none;
-    font-size: 17px;
-    font-family: 'Roboto', sans-serif;
-    border-radius: 0.75rem;
-}
 
-.Btn_buscar {
-    background: transparent;
-    border: none;
-    outline: none;
-    margin-left: -33px;
-}
-
-.Btn_buscar img {
-    width: 20px;
-    height: 20px;
-    object-fit: cover;
-    cursor: pointer;
-}
-
-#Busqueda:focus {
-    outline: none;
-}
-
-#CarritoCompras {
-    position: relative;
-    right: 10px;
-}
-
-#CarritoCompras img {
-    width: 35px;
-    height: 35px;
-}
-
-#CuentaUsuario img {
-    width: 28px;
-    height: 28px;
-    position: relative;
-    bottom: 2px;
-}
-
-.menu a:hover {
-    color: yellowgreen;
-}
-
-.piePagina {
-    background-image: url("../src/multimedia/imagenes/Fondo.png");
-}
-
-.piePagina {
-    grid-area: piePagina;
-}
-
-.piePagina p {
-    margin: 0;
-    color: whitesmoke;
-    padding-right: 55px;
-    padding-left: 55px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
-.menu-bar {
-    font-size: 30px;
-    color: #fff;
-    line-height: 80px;
-    cursor: pointer;
-}
+/* -------------------------- media queris - index -------------------------- */
 
 @media only screen and (max-width:1194px) {
 
@@ -203,7 +111,7 @@ header {
 .margenesImg_scroll {
     padding: 48px 80px 80px 80px;
     min-width: 100vw;
-    background-image: url("../src/multimedia/imagenes/indexFondocategorias.png");
+    background-image: url("../src/multimedia/img/indexFondocategorias.png");
     background-size: cover;
     background-position: center;
 }
@@ -274,20 +182,21 @@ header {
     }
 }
 
-.productos {
-    grid-area: productos;
-}
-
 .VinosMas_vendidos {
     background-color: #FFFFFF;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-right: 50px;
-    padding-left: 50px;
+    padding: 25px 50px 25px 50px;
 }
 
-.productos h1 {
-    margin-bottom: 15px;
+.productos {
+    grid-area: productos;
+
+    h1 {
+        margin-bottom: 15px;
+    }
+
+    & span {
+        color: $colorTitle;
+    }
 }
 
 .productos p {
@@ -319,6 +228,19 @@ header {
 .articulo {
     width: 20rem;
 }
+
+.contenidoProximo{
+    grid-area: contenidoP;
+
+    background-image: url("https://p4.wallpaperbetter.com/wallpaper/6/751/624/whisky-johnnie-walker-game-of-thrones-hd-wallpaper-preview.jpg");
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    & span{
+      color: $colorTitle;
+    }
+  }
 
 /*cards vinos index*/
 .elementos2 {
@@ -415,7 +337,7 @@ p {
     height: 269.328px;
 }
 
-.card-body{
+.card-body {
     height: 200px;
 }
 

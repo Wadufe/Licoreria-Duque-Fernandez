@@ -1,3 +1,4 @@
+/* ---- Variables ----- */
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +14,7 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(5, auto);
-  grid-template-areas: "header header header header header header" "sliders sliders sliders sliders sliders sliders" "scroll_img scroll_img scroll_img scroll_img scroll_img scroll_img" "productos productos productos productos productos productos" "articulos_index articulos_index articulos_index articulos_index articulos_index articulos_index" "piePagina piePagina piePagina piePagina piePagina piePagina";
+  grid-template-areas: "header header header header header header" "sliders sliders sliders sliders sliders sliders" "scroll_img scroll_img scroll_img scroll_img scroll_img scroll_img" "productos productos productos productos productos productos" "articulos_index articulos_index articulos_index articulos_index articulos_index articulos_index" "contenidoP contenidoP contenidoP contenidoP contenidoP contenidoP" "piePagina piePagina piePagina piePagina piePagina piePagina";
 }
 
 body::-webkit-scrollbar {
@@ -25,40 +26,38 @@ body::-webkit-scrollbar-thumb {
   border-radius: 5px;
 }
 
-.logo img {
-  height: 145px;
-  width: 200px;
-  position: relative;
-  bottom: 4px;
-}
-
 header {
   grid-area: header;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-image: url(../src/multimedia/imagenes/Fondo.png);
+  background-image: url(../src/multimedia/img/Fondo.png);
   height: 130px;
 }
-
-.menu li {
+header .logo img {
+  height: 145px;
+  width: 200px;
+  position: relative;
+  bottom: 4px;
+}
+header .menu li {
   display: inline-block;
 }
-
-.menu a {
+header .menu a {
   color: whitesmoke;
   margin-right: 35px;
   font-size: 19px;
 }
-
-.Form_buscar {
+header .menu a:hover {
+  color: yellowgreen;
+}
+header .Form_buscar {
   height: 35px;
   width: 14%;
   display: flex;
   flex-direction: row;
 }
-
-#Busqueda {
+header #Busqueda {
   width: 100%;
   padding: 10px 35px 10px 15px;
   border: none;
@@ -67,71 +66,54 @@ header {
   font-family: "Roboto", sans-serif;
   border-radius: 0.75rem;
 }
-
-.Btn_buscar {
+header #Busqueda:focus {
+  outline: none;
+}
+header .Btn_buscar {
   background: transparent;
   border: none;
   outline: none;
   margin-left: -33px;
 }
-
-.Btn_buscar img {
+header .Btn_buscar img {
   width: 20px;
   height: 20px;
   -o-object-fit: cover;
      object-fit: cover;
   cursor: pointer;
 }
-
-#Busqueda:focus {
-  outline: none;
-}
-
-#CarritoCompras {
+header #CarritoCompras {
   position: relative;
   right: 10px;
 }
-
-#CarritoCompras img {
+header #CarritoCompras img {
   width: 35px;
   height: 35px;
 }
-
-#CuentaUsuario img {
+header #CuentaUsuario img {
   width: 28px;
   height: 28px;
   position: relative;
   bottom: 2px;
 }
-
-.menu a:hover {
-  color: yellowgreen;
-}
-
-.piePagina {
-  background-image: url("../src/multimedia/imagenes/Fondo.png");
-}
-
-.piePagina {
-  grid-area: piePagina;
-}
-
-.piePagina p {
-  margin: 0;
-  color: whitesmoke;
-  padding-right: 55px;
-  padding-left: 55px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.menu-bar {
+header .menu-bar {
   font-size: 30px;
   color: #fff;
   line-height: 80px;
   cursor: pointer;
 }
 
+.piePagina {
+  grid-area: piePagina;
+  background-image: url("../src/multimedia/img/Fondo.png");
+}
+.piePagina p {
+  margin: 0;
+  color: whitesmoke;
+  padding: 50px 55px 50px 55px;
+}
+
+/* -------------------------- media queris - index -------------------------- */
 @media only screen and (max-width: 1194px) {
   nav,
 .Form_buscar,
@@ -180,7 +162,7 @@ header {
 .margenesImg_scroll {
   padding: 48px 80px 80px 80px;
   min-width: 100vw;
-  background-image: url("../src/multimedia/imagenes/indexFondocategorias.png");
+  background-image: url("../src/multimedia/img/indexFondocategorias.png");
   background-size: cover;
   background-position: center;
 }
@@ -254,20 +236,19 @@ header {
     transform: translateY(-9px);
   }
 }
+.VinosMas_vendidos {
+  background-color: #FFFFFF;
+  padding: 25px 50px 25px 50px;
+}
+
 .productos {
   grid-area: productos;
 }
-
-.VinosMas_vendidos {
-  background-color: #FFFFFF;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  padding-right: 50px;
-  padding-left: 50px;
-}
-
 .productos h1 {
   margin-bottom: 15px;
+}
+.productos span {
+  color: #B8A25A;
 }
 
 .productos p {
@@ -297,6 +278,17 @@ header {
 
 .articulo {
   width: 20rem;
+}
+
+.contenidoProximo {
+  grid-area: contenidoP;
+  background-image: url("https://p4.wallpaperbetter.com/wallpaper/6/751/624/whisky-johnnie-walker-game-of-thrones-hd-wallpaper-preview.jpg");
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contenidoProximo span {
+  color: #B8A25A;
 }
 
 /*cards vinos index*/
@@ -600,15 +592,4 @@ p {
 /*----------------------------------Contactanos-------------------------------*/
 .margenes-contactanos {
   padding: 32px 96px 48px 96px;
-}
-
-
-
-
-
-
-
-
-/* ---------------------------------------------------------------------------------------------------- */
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
