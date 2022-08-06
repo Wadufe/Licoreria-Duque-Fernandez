@@ -1,0 +1,264 @@
+.contenedorGrid_padre-index {
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+        "header header header header header header"
+        "sliders sliders sliders sliders sliders sliders"
+        "scroll_img scroll_img scroll_img scroll_img scroll_img scroll_img"
+        "productos productos productos productos productos productos"
+        "articulos_index articulos_index articulos_index articulos_index articulos_index articulos_index"
+        "contenidoP contenidoP contenidoP contenidoP contenidoP contenidoP"
+        "piePagina piePagina piePagina piePagina piePagina piePagina";
+}
+
+body::-webkit-scrollbar {
+    width: 7px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #cfcecf;
+    border-radius: 5px;
+}
+
+.sliders {
+    height: 83vh;
+    grid-area: sliders;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.margenesImg_scroll {
+    padding: 48px 80px 80px 80px;
+    min-width: 100vw;
+    background-image: url("../src/multimedia/img/indexFondocategorias.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.img_principales {
+    grid-area: scroll_img;
+
+    display: grid;
+    gap: 1em;
+    grid-auto-flow: column;
+    overflow-x: auto;
+
+    padding: 48px 0px 16px 0px;
+    overflow-y: hidden;
+
+    a {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        height: 6em;
+        width: 16em;
+        border-radius: 25px;
+
+        background-color: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(0.7rem);
+        box-shadow: 0.3em 0.3em 0.5em black;
+    }
+
+    p {
+        margin: 0;
+        color: white;
+        font-family: Prata;
+        font-size: 26px;
+    }
+
+    img {
+        max-width: 64px;
+        max-height: 120px;
+
+        align-self: flex-end;
+        position: relative;
+        bottom: 1rem;
+
+        &:hover {
+            animation: img-licor 0s ease 0s 1 normal forwards;
+        }
+    }
+
+    &::-webkit-scrollbar {
+        height: 7px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #cfcecf;
+        border-radius: 5px;
+    }
+
+}
+
+@keyframes img-licor {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-9px);
+    }
+}
+
+.VinosMas_vendidos {
+    background-color: #FFFFFF;
+    padding: 25px 50px 25px 50px;
+}
+
+.productos {
+    grid-area: productos;
+
+    h1 {
+        margin-bottom: 15px;
+    }
+
+    & span {
+        color: $colorTitle;
+    }
+
+    p {
+        text-align: justify;
+        margin-bottom: 25px;
+    }
+}
+
+#imgBase {
+    width: 320px;
+    height: 200px;
+    display: block;
+}
+
+.articulos_index {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    grid-area: articulos_index;
+    padding: 72px 0px 32px 0px;
+
+    background-image: url("../src/multimedia/img/indexFondocategorias.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.card-img-top {
+    height: 13rem;
+    object-fit: cover;
+}
+
+.articulo {
+    width: 20rem;
+}
+
+.contenidoProximo {
+    grid-area: contenidoP;
+
+    background-image: url("https://p4.wallpaperbetter.com/wallpaper/6/751/624/whisky-johnnie-walker-game-of-thrones-hd-wallpaper-preview.jpg");
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    & span {
+        color: $colorTitle;
+    }
+}
+
+/*cards vinos index*/
+.elementos2 {
+    position: relative;
+    top: 1.2em;
+}
+
+.tarjetasVinos {
+    width: 15.5625rem;
+}
+
+.tarjetasVinos img {
+    width: 249px;
+    height: 249px;
+}
+
+.cb2 {
+    padding: 0;
+    height: 187.59px;
+}
+
+.tarjetasVinos h5 {
+    font-size: 16px;
+    color: black;
+}
+
+.elementos2 label {
+    margin: 5px 0px 0px 0px;
+}
+
+.swiper-wrapper .elementos2 p {
+    font-size: 14px;
+    text-align: left;
+    margin: 15px 0px 5px 0px;
+    color: rgb(112, 112, 112);
+}
+
+.swiper-wrapper .tarjetasVinos a {
+    background-color: #810100;
+    color: whitesmoke;
+}
+
+
+
+
+
+@media only screen and (max-width: 1194px) {
+
+    nav,
+    .Form_buscar,
+    .iconos {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu-bar {
+        margin-right: 8%;
+    }
+}
+
+@media only screen and (min-width: 1194px) {
+    .menu-bar {
+        display: none;
+    }
+}

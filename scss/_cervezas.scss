@@ -1,0 +1,108 @@
+.margenes-cervezas {
+    padding: 32px 96px 48px 96px;
+}
+
+.filtro-cervezas {
+    padding-left: 28px;
+
+    p {
+        padding: 16px 20px 16px 20px;
+    }
+}
+
+.banner-cerveza {
+    grid-column: 2/5;
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+    }
+}
+
+.contenedorCervezas {
+    display: grid;
+    gap: 1.6em;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.cervezas-contenido {
+    grid-column: 2/5;
+
+    h1 {
+        color: olivedrab;
+        margin-bottom: 15px;
+    }
+
+    p {
+        margin-bottom: 15px;
+    }
+}
+
+/*-- productosCervezas -- */
+.cervezaCards {
+    width: 269.328px;
+    height: 475.102px;
+
+    img {
+        width: 269.328px;
+        height: 269.328px;
+    }
+
+}
+
+.card-body {
+    height: 200px;
+}
+
+.elementos1 p {
+    font-size: 14px;
+    margin: 10px 0px 6px 0px;
+    color: rgb(112, 112, 112);
+}
+
+.card-text {
+    margin: 0px 0px 10px 0px;
+}
+
+@media only screen and (max-width: 1194px) {
+    .contenedorCervezas {
+        display: grid;
+        gap: 1.6em;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas:
+            "banner-cerveza banner-cerveza banner-cerveza banner-cerveza"
+            "filtro-cervezas cervezas-contenido cervezas-contenido cervezas-contenido";
+    }
+
+    .filtro-cervezas {
+        grid-area: filtro-cervezas;
+        padding: 0%;
+
+        p {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+    }
+
+    .banner-cerveza {
+        grid-area: banner-cerveza;
+    }
+
+    .cervezas-contenido {
+        grid-area: cervezas-contenido;
+    }
+
+    .margenes-cervezas {
+        padding: 1rem;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+
+    .filtro-cervezas,
+    .cervezas-contenido {
+        font-size: 75%;
+    }
+}
