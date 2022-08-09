@@ -59,6 +59,7 @@ body::-webkit-scrollbar-thumb {
 .margenesImg_scroll {
     padding: 48px 80px 80px 80px;
     min-width: 100vw;
+    
     background-image: url("../src/multimedia/img/indexFondocategorias.png");
     background-size: cover;
     background-position: center;
@@ -87,6 +88,21 @@ body::-webkit-scrollbar-thumb {
         background-color: rgba(255, 255, 255, 0.2);
         backdrop-filter: blur(0.7rem);
         box-shadow: 0.3em 0.3em 0.5em black;
+
+        &:hover {
+            animation: img-licor 0s ease 0s 1 normal forwards;
+            -webkit-animation: img-licor 0s ease 0s 1 normal forwards;
+        }
+
+        @keyframes img-licor {
+            0% {
+                transform: translateY(0px);
+            }
+
+            100% {
+                transform: translateY(-9px);
+            }
+        }
     }
 
     p {
@@ -103,10 +119,6 @@ body::-webkit-scrollbar-thumb {
         align-self: flex-end;
         position: relative;
         bottom: 1rem;
-
-        &:hover {
-            animation: img-licor 0s ease 0s 1 normal forwards;
-        }
     }
 
     &::-webkit-scrollbar {
@@ -117,18 +129,8 @@ body::-webkit-scrollbar-thumb {
         background: #cfcecf;
         border-radius: 5px;
     }
-
 }
 
-@keyframes img-licor {
-    0% {
-        transform: translateY(0px);
-    }
-
-    100% {
-        transform: translateY(-9px);
-    }
-}
 
 .VinosMas_vendidos {
     background-color: #FFFFFF;
@@ -184,14 +186,17 @@ body::-webkit-scrollbar-thumb {
 .contenidoProximo {
     grid-area: contenidoP;
 
-    background-image: url("https://p4.wallpaperbetter.com/wallpaper/6/751/624/whisky-johnnie-walker-game-of-thrones-hd-wallpaper-preview.jpg");
-    height: 500px;
+    background-color: #121212;
+    height: 700px;
     background-repeat: no-repeat;
     background-size: cover;
 
     & span {
         color: $colorTitle;
     }
+
+    //.marcasFav{
+    //}
 }
 
 /*cards vinos index*/

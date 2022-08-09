@@ -2,10 +2,109 @@
     grid-area: piePagina;
     background-image: url("../src/multimedia/img/Fondo.png");
 
-    p {
-        margin: 0;
-        color: whitesmoke;
-        padding: 50px 55px 50px 55px;
+    .advertencia {
+
+        display: flex;
+        justify-content: center;
+
+        p {
+            width: 1000px;
+            margin: 20px 0px 25px 0px;
+            padding-bottom: 20px;
+            color: whitesmoke;
+            text-align: justify;
+            border-bottom: 1px solid #1F1F1F;
+        }
     }
+
+    .imgFooter {
+
+        @extend .advertencia;
+        //height: 100px;
+
+        img {
+            height: 200px;
+            width: 200px;
+            /*position: relative;
+            bottom: 5.5em;*/
+        }
+    }
+
+    .redesSociales {
+
+        text-align: center;
+        font-size: 30px;
+        color: #FFFF;
+        cursor: auto;
+
+        .fa-facebook,
+        .fa-youtube {
+
+            &:hover {
+                background-color: #FFFF;
+            }
+        }
+
+        .fa-facebook {
+            border-radius: 1em;
+            -webkit-border-radius: 1em;
+            -moz-border-radius: 1em;
+            -ms-border-radius: 1em;
+            -o-border-radius: 1em;
+        }
+
+        .fa-youtube {
+            line-height: 10px;
+            width: 30px;
+            border-radius: 50px;
+            -webkit-border-radius: 50px;
+            -moz-border-radius: 50px;
+            -ms-border-radius: 50px;
+            -o-border-radius: 50px;
+        }
+
+        $redesS: (
+            facebook:#1A77F2,
+            twitter: #1D9BF0,
+            youtube:#FF0000,
+        );
+
+    @each $nombreRedes,
+    $color in $redesS {
+        .fa-#{$nombreRedes} {
+            color: $color;
+            margin: 10px;
+            text-decoration: none;
+        }
+    }
+}
+
+@mixin grupoEnlac {
+
+    display: inline-block;
+
+    a {
+        color: whitesmoke;
+    }
+
+    li {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    position: relative;
+    //bottom: 48%
+    bottom: 40%;
+
+}
+
+.grupoEnlaces1 {
+    @include grupoEnlac();
+}
+
+.grupoEnlaces2 {
+    @include grupoEnlac();
+}
 
 }

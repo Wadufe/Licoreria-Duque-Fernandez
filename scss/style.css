@@ -1,4 +1,7 @@
 /* ---- Colores Titulos ----- */
+/* ---- Colores Parrafos ---- */
+/* ---- Colores de fondo ---- */
+/* ---- Fuentes Tipograficas ---- */
 header {
   grid-area: header;
   display: flex;
@@ -80,10 +83,86 @@ header .menu-bar {
   grid-area: piePagina;
   background-image: url("../src/multimedia/img/Fondo.png");
 }
-.piePagina p {
-  margin: 0;
+.piePagina .advertencia, .piePagina .imgFooter {
+  display: flex;
+  justify-content: center;
+}
+.piePagina .advertencia p, .piePagina .imgFooter p {
+  width: 1000px;
+  margin: 20px 0px 25px 0px;
+  padding-bottom: 20px;
   color: whitesmoke;
-  padding: 50px 55px 50px 55px;
+  text-align: justify;
+  border-bottom: 1px solid #1F1F1F;
+}
+.piePagina .imgFooter img {
+  height: 200px;
+  width: 200px;
+  /*position: relative;
+  bottom: 5.5em;*/
+}
+.piePagina .redesSociales {
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  cursor: auto;
+}
+.piePagina .redesSociales .fa-facebook:hover,
+.piePagina .redesSociales .fa-youtube:hover {
+  background-color: white;
+}
+.piePagina .redesSociales .fa-facebook {
+  border-radius: 1em;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  -ms-border-radius: 1em;
+  -o-border-radius: 1em;
+}
+.piePagina .redesSociales .fa-youtube {
+  line-height: 10px;
+  width: 30px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+.piePagina .redesSociales .fa-facebook {
+  color: #1A77F2;
+  margin: 10px;
+  text-decoration: none;
+}
+.piePagina .redesSociales .fa-twitter {
+  color: #1D9BF0;
+  margin: 10px;
+  text-decoration: none;
+}
+.piePagina .redesSociales .fa-youtube {
+  color: #FF0000;
+  margin: 10px;
+  text-decoration: none;
+}
+.piePagina .grupoEnlaces1 {
+  display: inline-block;
+  position: relative;
+  bottom: 40%;
+}
+.piePagina .grupoEnlaces1 a {
+  color: whitesmoke;
+}
+.piePagina .grupoEnlaces1 li:hover {
+  text-decoration: underline;
+}
+.piePagina .grupoEnlaces2 {
+  display: inline-block;
+  position: relative;
+  bottom: 40%;
+}
+.piePagina .grupoEnlaces2 a {
+  color: whitesmoke;
+}
+.piePagina .grupoEnlaces2 li:hover {
+  text-decoration: underline;
 }
 
 * {
@@ -166,6 +245,26 @@ body::-webkit-scrollbar-thumb {
           backdrop-filter: blur(0.7rem);
   box-shadow: 0.3em 0.3em 0.5em black;
 }
+.img_principales a:hover {
+  animation: img-licor 0s ease 0s 1 normal forwards;
+  -webkit-animation: img-licor 0s ease 0s 1 normal forwards;
+}
+@-webkit-keyframes img-licor {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-9px);
+  }
+}
+@keyframes img-licor {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-9px);
+  }
+}
 .img_principales p {
   margin: 0;
   color: white;
@@ -179,10 +278,6 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   bottom: 1rem;
 }
-.img_principales img:hover {
-  -webkit-animation: img-licor 0s ease 0s 1 normal forwards;
-          animation: img-licor 0s ease 0s 1 normal forwards;
-}
 .img_principales::-webkit-scrollbar {
   height: 7px;
 }
@@ -191,23 +286,6 @@ body::-webkit-scrollbar-thumb {
   border-radius: 5px;
 }
 
-@-webkit-keyframes img-licor {
-  0% {
-    transform: translateY(0px);
-  }
-  100% {
-    transform: translateY(-9px);
-  }
-}
-
-@keyframes img-licor {
-  0% {
-    transform: translateY(0px);
-  }
-  100% {
-    transform: translateY(-9px);
-  }
-}
 .VinosMas_vendidos {
   background-color: #FFFFFF;
   padding: 25px 50px 25px 50px;
@@ -257,8 +335,8 @@ body::-webkit-scrollbar-thumb {
 
 .contenidoProximo {
   grid-area: contenidoP;
-  background-image: url("https://p4.wallpaperbetter.com/wallpaper/6/751/624/whisky-johnnie-walker-game-of-thrones-hd-wallpaper-preview.jpg");
-  height: 500px;
+  background-color: #121212;
+  height: 700px;
   background-repeat: no-repeat;
   background-size: cover;
 }
