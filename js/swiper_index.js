@@ -1,5 +1,4 @@
 var swiper1 = new Swiper(".swiper-container-1", {
-  spaceBetween: 30,
   centeredSlides: true,
   autoplay: {
     delay: 4700,
@@ -7,7 +6,6 @@ var swiper1 = new Swiper(".swiper-container-1", {
   },
   pagination: {
     el: ".swiper-pagination",
-    clickable: true,
   },
   navigation: {
     nextEl: ".swiper-button-next",
@@ -37,7 +35,7 @@ var swiper2 = new Swiper(".swiper-container-2", {
       spaceBetween: 40,
     },
     1024: {
-      slidesPerView: 5,
+      slidesPerView: 4,
     },
   },
 });

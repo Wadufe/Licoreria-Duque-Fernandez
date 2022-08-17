@@ -9,7 +9,7 @@
         "sliders sliders sliders sliders sliders sliders"
         "scroll_img scroll_img scroll_img scroll_img scroll_img scroll_img"
         "productos productos productos productos productos productos"
-        "articulos_index articulos_index articulos_index articulos_index articulos_index articulos_index"
+        "articulos articulos articulos articulos articulos articulos"
         "contenidoP contenidoP contenidoP contenidoP contenidoP contenidoP"
         "piePagina piePagina piePagina piePagina piePagina piePagina";
 }
@@ -19,7 +19,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-    background: #cfcecf;
+    background: #490549;
     border-radius: 5px;
 }
 
@@ -57,16 +57,18 @@ body::-webkit-scrollbar-thumb {
 }
 
 .margenesImg_scroll {
+    grid-area: scroll_img;
+
     padding: 48px 80px 80px 80px;
     min-width: 100vw;
-    
+
     background-image: url("../src/multimedia/img/indexFondocategorias.png");
     background-size: cover;
     background-position: center;
 }
 
 .img_principales {
-    grid-area: scroll_img;
+
 
     display: grid;
     gap: 1em;
@@ -88,6 +90,22 @@ body::-webkit-scrollbar-thumb {
         background-color: rgba(255, 255, 255, 0.2);
         backdrop-filter: blur(0.7rem);
         box-shadow: 0.3em 0.3em 0.5em black;
+    }
+
+    p {
+        margin: 0;
+        color: white;
+        font-family: Prata;
+        font-size: 26px;
+    }
+
+    img {
+        max-width: 64px;
+        max-height: 120px;
+
+        align-self: flex-end;
+        position: relative;
+        bottom: 1rem;
 
         &:hover {
             animation: img-licor 0s ease 0s 1 normal forwards;
@@ -105,22 +123,6 @@ body::-webkit-scrollbar-thumb {
         }
     }
 
-    p {
-        margin: 0;
-        color: white;
-        font-family: Prata;
-        font-size: 26px;
-    }
-
-    img {
-        max-width: 64px;
-        max-height: 120px;
-
-        align-self: flex-end;
-        position: relative;
-        bottom: 1rem;
-    }
-
     &::-webkit-scrollbar {
         height: 7px;
     }
@@ -133,8 +135,34 @@ body::-webkit-scrollbar-thumb {
 
 
 .VinosMas_vendidos {
-    background-color: #FFFFFF;
-    padding: 25px 50px 25px 50px;
+    background-color: #F4F3ED;
+
+    padding: 25px;
+    display: flex;
+
+    .titleImg {
+        border: 0.5px solid blue;
+        width: 340px;
+        position: relative;
+
+        h1 {
+            font-family: prata;
+        }
+
+        .imgBase {
+            position: absolute;
+            bottom: 0%;
+
+            img {
+
+                width: 270px;
+                height: 130px;
+            }
+
+        }
+    }
+
+
 }
 
 .productos {
@@ -154,42 +182,85 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-#imgBase {
-    width: 320px;
-    height: 200px;
-    display: block;
-}
 
-.articulos_index {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
 
-    grid-area: articulos_index;
-    padding: 72px 0px 32px 0px;
 
+
+
+.margenesImgArticulos_index {
+    grid-area: articulos;
+
+    padding: 72px 96px 32px 96px;
     background-image: url("../src/multimedia/img/indexFondocategorias.png");
     background-size: cover;
     background-position: center;
+
+    .cardInfo {
+
+        display: grid;
+        gap: 2.5em;
+        grid-auto-flow: column;
+        overflow-x: auto;
+        padding: 0px 0px 20px 0px;
+
+        .articulo {
+            width: 380px;
+            border-radius: 25px;
+            -webkit-border-radius: 25px;
+            -moz-border-radius: 25px;
+            -ms-border-radius: 25px;
+            -o-border-radius: 25px;
+
+            .card-img-top {
+                height: 200px;
+                object-fit: cover;
+                border-radius: 25px 25px 0px 0px;
+                -webkit-border-radius: 25px 25px 0px 0px;
+                -moz-border-radius: 25px 25px 0px 0px;
+                -ms-border-radius: 25px 25px 0px 0px;
+                -o-border-radius: 25px 25px 0px 0px;
+            }
+
+            .card-body {
+                height: 108px;
+            }
+
+            //.card-title {}
+
+            //.card-text {}
+
+        }
+
+        &::-webkit-scrollbar {
+            height: 7px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #cfcecf;
+            border-radius: 5px;
+        }
+    }
+
+
+
+
+
 }
 
-.card-img-top {
-    height: 13rem;
-    object-fit: cover;
-}
 
-.articulo {
-    width: 20rem;
-}
+
+
+
 
 .contenidoProximo {
     grid-area: contenidoP;
 
-    background-color: #121212;
     height: 700px;
     background-repeat: no-repeat;
     background-size: cover;
+    background-image: linear-gradient(to top, #080700, #0e0905, #100c0c, #110f10, #121212);
+    backdrop-filter: blur(0.7rem);
+    box-shadow: 0.3em 0.3em 0.5em rgba(159, 5, 5, 0.637);
 
     & span {
         color: $colorTitle;
@@ -238,32 +309,4 @@ body::-webkit-scrollbar-thumb {
 .swiper-wrapper .tarjetasVinos a {
     background-color: #810100;
     color: whitesmoke;
-}
-
-
-
-
-
-@media only screen and (max-width: 1194px) {
-
-    nav,
-    .Form_buscar,
-    .iconos {
-        display: none;
-    }
-
-    header {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .menu-bar {
-        margin-right: 8%;
-    }
-}
-
-@media only screen and (min-width: 1194px) {
-    .menu-bar {
-        display: none;
-    }
 }

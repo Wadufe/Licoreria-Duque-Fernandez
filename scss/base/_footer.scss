@@ -1,14 +1,175 @@
 .piePagina {
     grid-area: piePagina;
-    background-image: url("../src/multimedia/img/Fondo.png");
+    background-color: #080700;
+
+    .contePrin_footer {
+
+        display: grid;
+        grid-auto-flow: column;
+        place-content: center;
+        padding-top: 30px;
+
+        .imgFooter {
+            order: 0;
+
+            img {
+
+                height: 200px;
+                width: 200px;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                filter: drop-shadow(-3px -3px 15px rgba(255, 255, 255, 0.3)) drop-shadow(-3px -3px 15px rgba(255, 255, 255, 0.3));
+                -webkit-filter: drop-shadow(-3px -3px 15px rgba(255, 255, 255, 0.3)) drop-shadow(-3px -3px 15px rgba(255, 255, 255, 0.3));
+            }
+        }
+
+        .redesSociales {
+
+            order: -3;
+            text-align: center;
+            font-size: 30px;
+            display: flex;
+            align-self: center;
+            flex-direction: column;
+
+            .fa-facebook,
+            .fa-youtube {
+
+                &:hover {
+                    background-color: #FFFF;
+                }
+            }
+
+            .fa-facebook {
+                border-radius: 1em;
+                -webkit-border-radius: 1em;
+                -moz-border-radius: 1em;
+                -ms-border-radius: 1em;
+                -o-border-radius: 1em;
+
+            }
+
+            .fa-youtube {
+                line-height: 10px;
+                border-radius: 50px;
+                -webkit-border-radius: 50px;
+                -moz-border-radius: 50px;
+                -ms-border-radius: 50px;
+                -o-border-radius: 50px;
+
+            }
+
+            $redesS: (
+                facebook:#1A77F2,
+                instagram:#5851D8,
+                youtube:#FF0000,
+            );
+
+        @each $nombreRedes,
+        $color in $redesS {
+            .fa-#{$nombreRedes} {
+                color: $color;
+            }
+        }
+    }
+
+    @mixin grupoEnlac {
+
+        margin: 0;
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+        padding: 0px 35px 0px 35px;
+
+
+        span {
+            font-weight: bold;
+        }
+
+        a {
+            color: whitesmoke;
+        }
+
+        li {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .grupoEnlaces1 {
+        @include grupoEnlac();
+        order: -1;
+    }
+
+    .grupoEnlaces2 {
+        @include grupoEnlac();
+        order: -1;
+    }
+
+    .grupoEnlaces3 {
+        @include grupoEnlac();
+    }
+
+
+
+    .sectionPagos {
+        order: 0;
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+
+        .imgPagos {
+            margin-bottom: 7.3px;
+
+            img {
+                width: 320px;
+            }
+        }
+
+        .imgSegure {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 7.3px;
+
+            img {
+                width: 100px;
+                height: 30px;
+                margin-right: 25px;
+                align-self: center;
+            }
+
+            span {
+                color: whitesmoke;
+                position: relative;
+                top: 8px;
+            }
+        }
+
+        .img-CamComercio {
+            margin-bottom: 7.3px;
+
+            img {
+                width: 130px;
+                height: 30px;
+            }
+        }
+    }
+}
+
+.ad-caja {
+
+    display: flex;
+    justify-content: center;
 
     .advertencia {
+        width: 75rem;
 
-        display: flex;
-        justify-content: center;
 
         p {
-            width: 1000px;
             margin: 20px 0px 25px 0px;
             padding-bottom: 20px;
             color: whitesmoke;
@@ -16,95 +177,137 @@
             border-bottom: 1px solid #1F1F1F;
         }
     }
+}
 
-    .imgFooter {
+}
 
-        @extend .advertencia;
-        //height: 100px;
+@media only screen and (max-width: 1374px) {
 
-        img {
-            height: 200px;
-            width: 200px;
-            /*position: relative;
-            bottom: 5.5em;*/
-        }
+    .contePrin_footer {
+
+        padding-bottom: 30px;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "imgFooter grupoEnlaces1 grupoEnlaces3 redesSociales"
+                             "imgFooter grupoEnlaces2 sectionPagos sectionPagos";
     }
 
     .redesSociales {
+        grid-area: redesSociales;
+        margin-bottom: 20px;
+    }
 
-        text-align: center;
-        font-size: 30px;
-        color: #FFFF;
-        cursor: auto;
+    .grupoEnlaces1 {
+        grid-area: grupoEnlaces1;
+        padding: 0px 0px 20px 20px !important;
+    }
 
-        .fa-facebook,
-        .fa-youtube {
+    .grupoEnlaces2 {
+        grid-area: grupoEnlaces2;
+        padding-left: 20px !important;
+    }
 
-            &:hover {
-                background-color: #FFFF;
-            }
-        }
+    .imgFooter {
+        grid-area: imgFooter;
+        display: flex;
+        align-self: center;
+    }
 
-        .fa-facebook {
-            border-radius: 1em;
-            -webkit-border-radius: 1em;
-            -moz-border-radius: 1em;
-            -ms-border-radius: 1em;
-            -o-border-radius: 1em;
-        }
+    .grupoEnlaces3 {
+        grid-area: grupoEnlaces3;
+        padding: 0px 0px 20px 0px !important;
+    }
 
-        .fa-youtube {
-            line-height: 10px;
-            width: 30px;
-            border-radius: 50px;
-            -webkit-border-radius: 50px;
-            -moz-border-radius: 50px;
-            -ms-border-radius: 50px;
-            -o-border-radius: 50px;
-        }
+    .sectionPagos {
+        grid-area: sectionPagos;
+    }
 
-        $redesS: (
-            facebook:#1A77F2,
-            twitter: #1D9BF0,
-            youtube:#FF0000,
-        );
-
-    @each $nombreRedes,
-    $color in $redesS {
-        .fa-#{$nombreRedes} {
-            color: $color;
-            margin: 10px;
-            text-decoration: none;
-        }
+    .advertencia {
+        padding: 0px 20px 0px 20px;
     }
 }
 
-@mixin grupoEnlac {
 
-    display: inline-block;
+@media only screen and (max-width: 830px) {
 
-    a {
-        color: whitesmoke;
+    .contePrin_footer {
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+                             "grupoEnlaces1 imgFooter redesSociales"
+                             "grupoEnlaces3 grupoEnlaces2 grupoEnlaces2"
+                             "sectionPagos sectionPagos sectionPagos";
     }
 
-    li {
-        &:hover {
-            text-decoration: underline;
-        }
+    .redesSociales {
+        grid-area: redesSociales;
     }
 
-    position: relative;
-    //bottom: 48%
-    bottom: 40%;
+    .grupoEnlaces1 {
+        grid-area: grupoEnlaces1;
+        padding: 0px !important;
+    }
 
+    .grupoEnlaces2 {
+        grid-area: grupoEnlaces2;
+        padding: 0px 0px 20px 25px !important;
+    }
+
+    .imgFooter {
+        grid-area: imgFooter;
+        display: flex;
+        justify-content: center;
+    }
+
+    .grupoEnlaces3 {
+        grid-area: grupoEnlaces3;
+    }
+
+    .sectionPagos {
+        grid-area: sectionPagos;
+    }
 }
 
-.grupoEnlaces1 {
-    @include grupoEnlac();
-}
+@media only screen and (max-width: 500px) {
 
-.grupoEnlaces2 {
-    @include grupoEnlac();
-}
+    .contePrin_footer {
 
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas: 
+                         "imgFooter"
+                         "redesSociales"
+                         "grupoEnlaces1"
+                         "grupoEnlaces3"
+                         "grupoEnlaces2"
+                         "sectionPagos";
+    }
+
+    .redesSociales {
+        grid-area: redesSociales;
+        display: inline !important;
+    }
+
+    .grupoEnlaces1 {
+        grid-area: grupoEnlaces1;
+        padding: 0px 0px 20px 0px !important;
+    }
+
+    .grupoEnlaces2 {
+        grid-area: grupoEnlaces2;
+        padding: 0px 0px 20px 0px !important;
+    }
+
+    .imgFooter {
+        grid-area: imgFooter;
+    }
+
+    .grupoEnlaces3 {
+        grid-area: grupoEnlaces3;
+        padding: 0px 0px 20px 0px !important;
+    }
+
+    .sectionPagos {
+        grid-area: sectionPagos;
+    }
 }
