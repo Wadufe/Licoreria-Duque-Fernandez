@@ -141,12 +141,27 @@ body::-webkit-scrollbar-thumb {
     display: flex;
 
     .titleImg {
-        border: 0.5px solid blue;
+        border: 0.5px solid black;
+        background-color: #FFFFFF;
+        margin-right: 1em;
         width: 340px;
         position: relative;
+        box-shadow: 0.3em 0.3em 0.5em black;
 
         h1 {
             font-family: prata;
+            line-height: 1em;
+            font-size: 30px;
+            padding: 10px 10px 0px 10px;
+
+            & span {
+                color: $colorTitle;
+            }
+        }
+
+        p {
+            text-align: justify;
+            padding: 1em;
         }
 
         .imgBase {
@@ -154,38 +169,21 @@ body::-webkit-scrollbar-thumb {
             bottom: 0%;
 
             img {
-
-                width: 270px;
-                height: 130px;
+                width: 100%;
             }
-
         }
     }
 
 
 }
 
+
+
+
+
 .productos {
     grid-area: productos;
-
-    h1 {
-        margin-bottom: 15px;
-    }
-
-    & span {
-        color: $colorTitle;
-    }
-
-    p {
-        text-align: justify;
-        margin-bottom: 25px;
-    }
 }
-
-
-
-
-
 
 .margenesImgArticulos_index {
     grid-area: articulos;
@@ -206,6 +204,7 @@ body::-webkit-scrollbar-thumb {
         .articulo {
             width: 380px;
             border-radius: 25px;
+            background-color: #1A1A1A;
             -webkit-border-radius: 25px;
             -moz-border-radius: 25px;
             -ms-border-radius: 25px;
@@ -225,10 +224,15 @@ body::-webkit-scrollbar-thumb {
                 height: 108px;
             }
 
-            //.card-title {}
+            .card-title {
+                margin: 0;
+                font-size: 17px;
+                color: #fff;
+            }
 
-            //.card-text {}
-
+            .card-text {
+                color: $colorTitle;
+            }
         }
 
         &::-webkit-scrollbar {
@@ -241,16 +245,7 @@ body::-webkit-scrollbar-thumb {
         }
     }
 
-
-
-
-
 }
-
-
-
-
-
 
 .contenidoProximo {
     grid-area: contenidoP;
@@ -277,7 +272,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .tarjetasVinos {
-    width: 15.5625rem;
+    width: 249px;
 }
 
 .tarjetasVinos img {
@@ -309,4 +304,23 @@ body::-webkit-scrollbar-thumb {
 .swiper-wrapper .tarjetasVinos a {
     background-color: #810100;
     color: whitesmoke;
+}
+
+@media only screen and (max-width: 1378px) {
+
+    .VinosMas_vendidos {
+
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "titleImg titleImg"
+            "swiper-container-2 swiper-container-2";
+    }
+
+    .titleImg {
+        grid-area: titleImg;
+    }
+
+    .swiper-container-2 {
+        grid-area: swiper-container-2;
+    }
 }

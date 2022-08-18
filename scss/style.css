@@ -537,34 +537,36 @@ body::-webkit-scrollbar-thumb {
   display: flex;
 }
 .VinosMas_vendidos .titleImg {
-  border: 0.5px solid blue;
+  border: 0.5px solid black;
+  background-color: #FFFFFF;
+  margin-right: 1em;
   width: 340px;
   position: relative;
+  box-shadow: 0.3em 0.3em 0.5em black;
 }
 .VinosMas_vendidos .titleImg h1 {
   font-family: prata;
+  line-height: 1em;
+  font-size: 30px;
+  padding: 10px 10px 0px 10px;
+}
+.VinosMas_vendidos .titleImg h1 span {
+  color: #b8a25a;
+}
+.VinosMas_vendidos .titleImg p {
+  text-align: justify;
+  padding: 1em;
 }
 .VinosMas_vendidos .titleImg .imgBase {
   position: absolute;
   bottom: 0%;
 }
 .VinosMas_vendidos .titleImg .imgBase img {
-  width: 270px;
-  height: 130px;
+  width: 100%;
 }
 
 .productos {
   grid-area: productos;
-}
-.productos h1 {
-  margin-bottom: 15px;
-}
-.productos span {
-  color: #b8a25a;
-}
-.productos p {
-  text-align: justify;
-  margin-bottom: 25px;
 }
 
 .margenesImgArticulos_index {
@@ -584,6 +586,7 @@ body::-webkit-scrollbar-thumb {
 .margenesImgArticulos_index .cardInfo .articulo {
   width: 380px;
   border-radius: 25px;
+  background-color: #1A1A1A;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
   -ms-border-radius: 25px;
@@ -601,6 +604,14 @@ body::-webkit-scrollbar-thumb {
 }
 .margenesImgArticulos_index .cardInfo .articulo .card-body {
   height: 108px;
+}
+.margenesImgArticulos_index .cardInfo .articulo .card-title {
+  margin: 0;
+  font-size: 17px;
+  color: #fff;
+}
+.margenesImgArticulos_index .cardInfo .articulo .card-text {
+  color: #b8a25a;
 }
 .margenesImgArticulos_index .cardInfo::-webkit-scrollbar {
   height: 7px;
@@ -631,7 +642,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .tarjetasVinos {
-  width: 15.5625rem;
+  width: 249px;
 }
 
 .tarjetasVinos img {
@@ -665,6 +676,19 @@ body::-webkit-scrollbar-thumb {
   color: whitesmoke;
 }
 
+@media only screen and (max-width: 1378px) {
+  .VinosMas_vendidos {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "titleImg titleImg" "swiper-container-2 swiper-container-2";
+  }
+  .titleImg {
+    grid-area: titleImg;
+  }
+  .swiper-container-2 {
+    grid-area: swiper-container-2;
+  }
+}
 .margenes-cervezas {
   padding: 32px 96px 48px 96px;
 }
