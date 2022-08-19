@@ -134,6 +134,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 
+
+.productos {
+    grid-area: productos;
+}
+
 .VinosMas_vendidos {
     background-color: #F4F3ED;
 
@@ -165,6 +170,7 @@ body::-webkit-scrollbar-thumb {
         }
 
         .imgBase {
+            
             position: absolute;
             bottom: 0%;
 
@@ -173,17 +179,13 @@ body::-webkit-scrollbar-thumb {
             }
         }
     }
-
-
 }
 
 
 
 
 
-.productos {
-    grid-area: productos;
-}
+
 
 .margenesImgArticulos_index {
     grid-area: articulos;
@@ -310,17 +312,14 @@ body::-webkit-scrollbar-thumb {
 
     .VinosMas_vendidos {
 
-        grid-template-columns: auto auto;
-        grid-template-rows: auto auto;
-        grid-template-areas: "titleImg titleImg"
-            "swiper-container-2 swiper-container-2";
-    }
+        .titleImg {
+            flex-direction: row !important;
 
-    .titleImg {
-        grid-area: titleImg;
-    }
-
-    .swiper-container-2 {
-        grid-area: swiper-container-2;
+            .imgBase{
+                img{
+                    overflow: visible;
+                }
+            }
+        }
     }
 }

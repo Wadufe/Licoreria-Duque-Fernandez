@@ -531,6 +531,10 @@ body::-webkit-scrollbar-thumb {
   border-radius: 5px;
 }
 
+.productos {
+  grid-area: productos;
+}
+
 .VinosMas_vendidos {
   background-color: #F4F3ED;
   padding: 25px;
@@ -563,10 +567,6 @@ body::-webkit-scrollbar-thumb {
 }
 .VinosMas_vendidos .titleImg .imgBase img {
   width: 100%;
-}
-
-.productos {
-  grid-area: productos;
 }
 
 .margenesImgArticulos_index {
@@ -677,16 +677,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media only screen and (max-width: 1378px) {
-  .VinosMas_vendidos {
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-    grid-template-areas: "titleImg titleImg" "swiper-container-2 swiper-container-2";
+  .VinosMas_vendidos .titleImg {
+    flex-direction: row !important;
   }
-  .titleImg {
-    grid-area: titleImg;
-  }
-  .swiper-container-2 {
-    grid-area: swiper-container-2;
+  .VinosMas_vendidos .titleImg .imgBase img {
+    overflow: visible;
   }
 }
 .margenes-cervezas {

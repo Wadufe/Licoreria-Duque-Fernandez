@@ -11,7 +11,9 @@
     <link rel="icon" type="image/png" href="../../recursos/img/Pestaña_logo.ico" />
     <link rel="stylesheet" href="../../scss/style.css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -22,38 +24,86 @@
 <body>
     <!-- -------------------------------Logo de la empresa-------------------------------->
     <header id="inicio">
-        <a href="../../index.html" class="logo">
-            <img src="../multimedia/img/Logo.png" alt="logo de la empresa">
-        </a>
-        <!-- -------------------------------Menu principal--------------------------------- -->
-        <nav>
-            <ul class="menu">
-                <li><a href="cervezas1.html">Cervezas</a></li>
-                <li><a href="vinos2.html">Vinos</a></li>
-                <li><a href="licoresFuertes3.html">Licores fuertes</a></li>
-                <li><a href="alimentos4.html">Alimentos</a></li>
-                <li><a href="contactanos5.html">Contactanos</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+
+                <a href="../../index.html" class="logo">
+                    <img src="../multimedia/img/Logo.png" alt="logo de la empresa" />
+                </a>
+
+                <button class="navbar-toggler d-flex d-lg-none flex-column justify-content-around" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="toggler-icon top-bar"></span>
+                    <span class="toggler-icon middle-bar"></span>
+                    <span class="toggler-icon bottom-bar"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 list-group">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/src/pages/cervezas1.html">Cervezas</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/src/pages/vinos2.html">Vinos</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="/src/pages/licoresFuertes3.html">Licores</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="/src/pages/alimentos4.html">Alimentos</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="/src/pages/contactanos5.html">Contactanos</a>
+                        </li>
+                    </ul>
+
+                    <div class="formBusq">
+
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2 border border-0" aria-label="Search" type="search"
+                                placeholder="Buscar" id="Busqueda" required pattern="[a-z A-Z]+">
+
+                            <button class="btn Btn_buscar border border-0 text-dark" type="submit">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-search"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="iconsNav d-flex">
+                        <div class="carIcon">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-cart4"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+                                </svg></a>
+                        </div>
+
+                        <div class="userIcon">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-person-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </nav>
-        <form action="" method="" class="Form_buscar" autocomplete="off">
-            <input type="search" placeholder="Buscar" id="Busqueda" required pattern="[a-z A-Z]+">
-            <button type="submit" class="Btn_buscar">
-                <img src="../multimedia/img/search.png">
-            </button>
-        </form>
-        <div class="iconos">
-            <a href="" id="CarritoCompras">
-                <img src="../multimedia/img/carrito-de-compras.png" alt="Carrito de compras">
-            </a>
-            <a href="" id="CuentaUsuario">
-                <img src="../multimedia/img/usuario.png" alt="Cuenta del cliente">
-            </a>
-        </div>
-
-        <div class="menu-bar">
-            <i class="fas fa-bars" id="menu-bar"></i>
-        </div>
-
     </header>
     <main>
         <div class="margenes-vinos">
@@ -414,9 +464,112 @@
     </main>
     <!-- -------------------------------Pie de pagina--------------------------------- -->
     <footer class="piePagina">
-        <p>“DISFRUTA LO MEJOR DE TOMAR, SIN LO MALO DE EXCEDERTE”. EL EXCESO DE ALCOHOL ES PERJUDICIAL PARA LA SALUD.
-            LEY 30 DE 1986. PROHÍBASE EL EXPENDIO DE BEBIDAS EMBRIAGANTES A MENORES DE EDAD Y MUJERES EMBARAZADAS. LEY
-            124 DE 1994.”</p>
+
+        <section class="contePrin_footer">
+            <div class="imgFooter">
+                <img src="../multimedia/img/img_footer.png" alt="">
+            </div>
+
+            <ul class="grupoEnlaces1">
+                <a href="#" class="text-decoration-none">
+                    <li><span>Productos</span></li>
+                </a>
+                <a href="#" class="text-decoration-none">
+                    <li>Quienes somos</li>
+                </a>
+                <a href="#" class="text-decoration-none">
+                    <li>Trabaja con nosotros</li>
+                </a>
+                <a href="#" class="text-decoration-none">
+                    <li>Cotizaciones</li>
+                </a>
+                <a href="#" class="text-decoration-none">
+                    <li>Preguntas frecuentes</li>
+                </a>
+            </ul>
+
+            <ul class="grupoEnlaces2">
+                <a href="#" class="text-decoration-none">
+                    <li><span>Información legal</span></li>
+                </a>
+                <a href="#" class="text-decoration-none">
+                    <li>Responsabiliad social</li>
+                </a>
+                <a href="#" class="text-decoration-none">
+                    <li>Terminos y condiciones</li>
+                </a>
+                <a href="#" class="text-decoration-none">
+                    <li>Politica de privacidad de datos</li>
+                </a>
+                <a href="#" class="text-decoration-none">
+                    <li>Politica de cookies</li>
+                </a>
+            </ul>
+
+            <ul class="grupoEnlaces3">
+
+                <a href="#" class="text-decoration-none">
+                    <li><span>Atencion al cliente</span></li>
+                </a>
+                <a href="#" class="text-decoration-none">
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-whatsapp" viewBox="0 0 16 16">
+                            <path
+                                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                        </svg> 3104153450</li>
+                </a>
+                <a href="#" class="text-decoration-none">
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                        </svg> (601) 241 5535</li>
+                </a>
+                <a href="#" class="text-decoration-none">
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                        </svg> online@beerhouse.com</li>
+                </a>
+                <a href="#" class="text-decoration-none">
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                        </svg> Localizar store</li>
+                </a>
+            </ul>
+
+            <div class="redesSociales">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+
+            <div class="sectionPagos">
+                <div class="imgPagos">
+                    <img src="../multimedia/img/medios-pago-footer.png" alt="">
+                </div>
+                <div class="imgSegure">
+                    <p><span>Navega seguro</span></p><img src="../multimedia/img/secure-footer.png" alt="">
+                </div>
+                <div class="img-CamComercio">
+                    <img src="../multimedia/img/logo-industria-y-comercio.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <div class="ad-caja">
+            <div class="advertencia">
+                <p>
+                    “DISFRUTA LO MEJOR DE TOMAR, SIN LO MALO DE EXCEDERTE”. EL EXCESO DE
+                    ALCOHOL ES PERJUDICIAL PARA LA SALUD. LEY 30 DE 1986. PROHÍBASE EL
+                    EXPENDIO DE BEBIDAS EMBRIAGANTES A MENORES DE EDAD Y MUJERES
+                    EMBARAZADAS. LEY 124 DE 1994.”
+                </p>
+            </div>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
