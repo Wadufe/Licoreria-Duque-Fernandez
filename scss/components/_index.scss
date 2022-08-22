@@ -170,7 +170,7 @@ body::-webkit-scrollbar-thumb {
         }
 
         .imgBase {
-            
+
             position: absolute;
             bottom: 0%;
 
@@ -315,18 +315,31 @@ body::-webkit-scrollbar-thumb {
         .titleImg {
             flex-direction: row !important;
 
-            .imgBase{
-                img{
+            .imgBase {
+                img {
                     overflow: visible;
                 }
             }
         }
     }
-@media only screen and (max-width: 640px) {
 
-.margenesImgArticulos_index{
-   padding: 72px 25px 32px 25px;
-   }
-} 
+    @media only screen and (max-width: 375px) {
+
+        .margenesImgArticulos_index {
+            padding: 72px 25px 32px 25px;
+        }
+
+        #card-A{
+            margin-left: 21px;
+        }
+
+        .articulo {
+            width: 285px !important;
+        }
+
+        .margenesImg_scroll{
+            padding: 48px 30px 80px 30px;
+        }
+    }
 
 }
